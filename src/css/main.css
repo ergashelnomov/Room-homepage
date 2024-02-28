@@ -10,17 +10,19 @@ body {
 .wrapper > .container {
   width: 100%;
   max-width: 1440px;
+  height: 100vh;
   margin: 0 auto;
   display: grid;
-  grid-template-rows: 534px 266px;
+  grid-template-rows: 2fr 1fr;
   grid-template-columns: 840px 600px;
   position: relative;
 }
 .wrapper > .container > .header {
   padding: 63px 64px;
   max-width: 840px;
-  height: 534px;
-  background: url(/src/img/header-bg_1.jpg) no-repeat;
+  height: 100%;
+  background: url(/src/img/header-bg_1.jpg);
+  background-repeat: no-repeat;
   background-size: 100% 100%;
   display: flex;
   align-items: baseline;
@@ -65,7 +67,7 @@ body {
 }
 .wrapper > .container > .main-section {
   max-width: 600px;
-  height: 534px;
+  height: 100%;
   padding: 120px 100px 153px 100px;
   display: flex;
   flex-direction: column;
@@ -117,7 +119,7 @@ body {
 .wrapper > .container > .about-section {
   grid-column: 1/3;
   display: grid;
-  grid-template-columns: 420px 580px 440px;
+  grid-template-columns: 420px minmax(300px, 580px) 440px;
 }
 .about-section > .discription {
   padding: 68px 48px 58px 48px;
@@ -136,6 +138,7 @@ body {
 }
 .wrapper > .container > .about-section > img {
   max-width: 420px;
+  height: 100%;
 }
 .about-section > .discription > p {
   font-family: "League Spartan", sans-serif;
@@ -145,7 +148,7 @@ body {
   letter-spacing: -0.02em;
   color: #a0a0a0;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 700px) {
   .wrapper > .container {
     max-width: 375px;
     grid-template-columns: 375px;
